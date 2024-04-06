@@ -19,7 +19,7 @@ const carSchema = new mongoose.Schema({
     },
     colour: {
         type: String,
-        required: true,
+        required: false,
     },
     price: {
         type: Number,
@@ -27,7 +27,7 @@ const carSchema = new mongoose.Schema({
     },
     bodyStyle: {
         type: String,
-        required: true,
+        required: false,
     },
     description: {
         type: String,
@@ -35,7 +35,7 @@ const carSchema = new mongoose.Schema({
     },
     images: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 
