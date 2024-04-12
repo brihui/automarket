@@ -1,6 +1,5 @@
 const express = require('express');
-// const mongoose = require('mongoose');
-const { Car } = require('./Models/car');
+const { Car } = require('../Models/car');
 require("dotenv").config();
 const router = express.Router();
 

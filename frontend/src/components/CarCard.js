@@ -20,7 +20,7 @@ const CarCard = (props) => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete("http://localhost:5000/delete/" + id);
+            const response = await axios.delete("http://localhost:5000/cars/delete/" + id);
             console.log(response.data);
             if (response.data === "Car deleted") {
                 props.getCars();
@@ -33,9 +33,10 @@ const CarCard = (props) => {
     return (
         <React.Fragment>
             <Card
+                variant="outlined"
                 sx={{
-                width: 345,
-                height: 550,
+                width: 400,
+                height: 450,
                 display: "flex",
                 justifyContent: "space-between",
                 flexDirection: "column",
@@ -65,7 +66,7 @@ const CarCard = (props) => {
                 </CardContent>
                 <CardActions>
                     <Stack direction="row" gap={2}>
-                        <Button color="primary" variant="contained" onClick={() => handleUpdate(car._id)}>
+                        <Button color="warning" variant="contained" onClick={() => handleUpdate(car._id)}>
                             Update
                         </Button>
                         <Button color="error" variant="contained" onClick={() => handleDelete(car._id)}>

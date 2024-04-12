@@ -26,7 +26,7 @@ const SellCar = () => {
     const handleSell = async () => {
         console.log(carData);
         try {
-            const response = await axios.post("http://localhost:5000/create", {
+            const response = await axios.post("http://localhost:5000/cars/create", {
                 data: carData,
             });
             if (response.data === "Car saved to the database") {

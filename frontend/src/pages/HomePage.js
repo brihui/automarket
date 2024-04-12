@@ -14,7 +14,7 @@ const HomePage = () => {
 
     const getCars = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/read");
+            const response = await axios.get("http://localhost:5000/cars/read");
             setCarList(response.data);
         } catch (e) {
             console.log(e);
@@ -24,7 +24,7 @@ const HomePage = () => {
     return (
         <React.Fragment>
             <NavBar />
-            <Grid container gap={3} sx={{ paddingTop: 2, paddingLeft: 3 }}>
+            <Grid container spacing={2} sx={{ paddingTop: 2, paddingLeft: 3 }}>
                 {carList.length !== 0 &&
                     carList.map((car) => (
                         <Grid item key={car._id}>

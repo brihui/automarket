@@ -15,7 +15,7 @@ const UpdateCar = () => {
 
     const getCar = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/" + id);
+            const response = await axios.get("http://localhost:5000/cars/" + id);
             console.log(response.data);
             setCarData(response.data);
         } catch (e) {
@@ -31,7 +31,7 @@ const UpdateCar = () => {
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put("http://localhost:5000/update/" + id, {
+            const response = await axios.put("http://localhost:5000/cars/update/" + id, {
                 data: carData,
             });
             if (response.data === "Car updated successfully") {
